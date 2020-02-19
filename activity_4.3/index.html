@@ -18,7 +18,7 @@
     </div>
   
     <script>
-      let apiEndpoint = "https://data.cityofchicago.org/resource/xzkq-xp2w.json?$LIMIT=5";
+      let apiEndpoint = "https://data.cityofchicago.org/resource/xzkq-xp2w.json?$LIMIT=10";
       
       fetch(apiEndpoint)
       .then(response => {return response.json()})
@@ -27,8 +27,10 @@
         for (let record of json) {
           let clone = document.querySelector(".card").cloneNode(true);
           clone.classList.remove("card");
-          console.log(clone.firstChild.textContent)
-          document.body.append(clone)
+          clone.querySelector(".card-title").textContent = record["name"];
+          clone.querySelector(".card-subtitle").textContent = record["department"];
+          clone.querySelector(".card-text").textContent = record["annual_salary"];
+          document.body.append(clone);
         }
       })
       .catch(err => alert (err))
