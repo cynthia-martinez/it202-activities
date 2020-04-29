@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Activity 9.3</title>
+    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+
+  <body>
+    <button class="mdc-button mdc-button--raised" id="GRAF">  <span class="mdc-button__ripple"></span> Graffiti Removal Request </button>
+    <button class="mdc-button mdc-button--raised" id="SFD">  <span class="mdc-button__ripple"></span> Street Light Out Complaint</button>
+    <button class="mdc-button mdc-button--raised" id="CSF">  <span class="mdc-button__ripple"></span> Consumer Fraud Complaint</button>
+    <div id="data">
+      
+    </div>
+    
+    <script>
+      mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
+    </script>
+ 
+  </body>
+
+</html>
